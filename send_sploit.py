@@ -3,17 +3,11 @@
 ------------------------------------------------------------------------
 ********documentation*********
 ------------------------------------------------------------------------
-This is another small python script I wrote to aid me in learning python
 the script takes NIX* like arguments from the command line which include
 a remote address,a remote port,a character and the number of characters
-to be send.
-It then sends these charcters to the IP address in question to the port
-specified.   if the application on the other side goes Blah ! then thats
-all get to work with gdb you know the EIP register stuff 
-Thats all there is to the documentation!
+to be send. It then sends these charcters to the IP address in question to the port
+specified.   
 ------------------------------------------------------------------------
-author:plast1k  http://www.chimera40.wordpress.com
-
 ########################################################################
 '''
 import getopt 
@@ -44,7 +38,6 @@ def about():
     print color.BLUE +"\t###################################################################"
     print color.BLUE +"\t#"+ color.RED +"============++++++"+color.GREEN +" sendsploit.py ver 0.1 "+color.RED +"++++++++++=============="+color.RED +"#"
     color.DEFAULT_COLOR
-    print color.BLUE +"\t#"+ color.PINK +"--------by ch!m3ra: http://www.chimera40.wordpress.com-----------"+color.BLUE +"#"
     print color.BLUE +"\t#"+ color.PINK +"=============++++++++++++++++++++++++++++++++++++++=============="+color.BLUE +"#"
     print color.BLUE +"\t###################################################################"
     print color.DEFAULT_COLOR
@@ -115,15 +108,13 @@ def send_data():
         my_socket=socket(AF_INET,SOCK_STREAM)
         my_socket.connect((remote_address,int(remote_port)))
         my_socket.send(xsploit_data)
-        print "your exploit data has been send to",remote_address,"Good luck with gdb :) dude"
+        print "your exploit data has been send to",remote_address,"Good luck......."
         #close my sweet socket
         my_socket.close()
     except:
-        print "\nSploit FAILED ! check out that the remote host is really interested,ready or both :("
-        print "Check out the kind of IP you gave coz if it's gabagge then........well its not being checked!"
+        print "\nSploit FAILED ! check out that the remote host is really up :("
+        print "Check out the kind of IP you gave...... its not being checked!"
 print_answer()
 #END
-''' update through svn available :)
-well you can get the latest copy at http://code.google.com/chimeraproject/p/sendsploit.py
-'''
+
    
